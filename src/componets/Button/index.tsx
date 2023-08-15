@@ -4,11 +4,12 @@ import './style.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     size: 'small' | 'normal' | 'large'
+    color: 'red' | 'green' | 'blue'
  }
 
- const Button = ({ size, children, ...props }: ButtonProps): JSX.Element => {
+ const Button = ({ color, size, children, ...props }: ButtonProps): JSX.Element => {
     return (
-        <button {...props} className={size}>
+        <button {...props} className={size+ ' ' +color}>
             {children}
         </button>
     )

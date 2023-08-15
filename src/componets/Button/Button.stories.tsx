@@ -7,8 +7,15 @@ import * as React from 'react';
        title: 'Example/Button',
        component: Button,
        argTypes: {
+        color: {
+            name: 'Button size',
+           control: {type: 'radio'}, 
+           options: ['red', 'green', 'blue']
+       },
            size: {
-               control: 'select', options: ['small', 'normal', 'large']
+                name: 'Button size',
+               control: {type: 'radio'}, 
+               options: ['small', 'normal', 'large']
            },
            disabled: {
                control: 'boolean',
