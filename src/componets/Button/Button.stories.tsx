@@ -29,8 +29,10 @@ import * as React from 'react';
     export const Basic = Template.bind({}); // инициализация компонента
     // More on args: https://storybook.js.org/docs/react/writing-stories/args
     Basic.args = {
-       children: 'Кнопка',
+       text: 'Click Me',
        size: 'small',
-       disabled: false
+       disabled: false,
+       color: 'red',
+       onClick: () => {}
     }; // настройки компоненты по умолчанию
     

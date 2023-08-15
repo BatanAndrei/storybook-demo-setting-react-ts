@@ -21,6 +21,10 @@ button {
    background-color: red;
  }
 
+ .red:hover, .green:hover, .blue:hover {
+   filter: brightness(85%);
+ }
+
  .green {
    background-color: green;
  }
