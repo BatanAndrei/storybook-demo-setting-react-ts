@@ -10,14 +10,14 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement>
     const {placeholder, onChange, ...rest} = props;
     const [value, setValue] = useState(''); 
 
-    const heanslerOnChange = (e) => {
+    const heandlerOnChange = (e) => {
         setValue(e.target.value)
         if(onChange){
             onChange(e)
         }
     }
 
-    const heanslerDelete = (e) => {
+     const heandlerDelete = (e) => {
         setValue('')
         if(onChange){
             onChange(e)
@@ -27,12 +27,12 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement>
 
     return (
         <div>
-            <Input {...rest} className={'input'} 
-                onChange={heanslerOnChange} 
+            <input {...rest} className={'input'} 
+                onChange={heandlerOnChange} 
                 value={value} 
                 placeholder={placeholder || 'Enter text'}>
-            </Input>
-            {value && <div className={'delete'} onClick={heanslerDelete}></div>}
+            </input>
+              {value && <div className={'delete'} onClick={heandlerDelete}></div>}
         </div>
         
     )
